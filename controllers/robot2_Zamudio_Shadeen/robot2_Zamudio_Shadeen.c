@@ -11,11 +11,13 @@
  * <webots/differential_wheels.h>, etc.
  */
 #include <webots/robot.h>
+#include <webots/motor.h>
 
 /*
  * You may want to add macros here.
  */
 #define TIME_STEP 64
+#define PI 3.14159
 
 /*
  * This is the main program.
@@ -33,6 +35,7 @@ int main(int argc, char **argv)
    *  WbDeviceTag my_sensor = wb_robot_get_device("my_sensor");
    *  WbDeviceTag my_actuator = wb_robot_get_device("my_actuator");
    */
+  WbDeviceTag servo = wb_robot_get_device("servo_motor");
 
   /* main loop
    * Perform simulation steps of TIME_STEP milliseconds
@@ -52,6 +55,7 @@ int main(int argc, char **argv)
      * Enter here functions to send actuator commands, like:
      * wb_differential_wheels_set_speed(100.0,100.0);
      */
+   wb_motor_set_position(servo, PI/4);
   };
 
   /* Enter your cleanup code here */

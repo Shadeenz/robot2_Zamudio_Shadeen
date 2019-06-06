@@ -14,7 +14,7 @@ Floor {
 Robot {
   translation 0 0.15 0
   children [
-    Shape {
+    DEF BASE Shape {
       appearance PBRAppearance {
         baseColor 0.5411764705882353 0.8862745098039215 0.20392156862745098
       }
@@ -22,7 +22,7 @@ Robot {
         size 0.1 0.3 0.1
       }
     }
-    HingeJoint {
+    DEF HG_SOLID_1 HingeJoint {
       jointParameters HingeJointParameters {
         axis 0 1 0
         anchor 0 0.15 0
@@ -30,11 +30,11 @@ Robot {
       device [
         RotationalMotor {
           name "servo_motor"
-          maxVelocity 0.026
+          maxVelocity 13.1
           maxTorque 0.21557
         }
       ]
-      endPoint Solid {
+      endPoint DEF SOLID_1 Solid {
         translation 0 0.2 0
         children [
           Shape {
