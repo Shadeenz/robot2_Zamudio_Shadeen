@@ -2,7 +2,7 @@
 WorldInfo {
 }
 Viewpoint {
-  orientation -0.013590964019866914 0.9998063199808013 0.01423405154754751 0.8144480666326407
+  orientation 0.007070729619527833 0.9999557121528897 0.006211160556187634 0.7456405256963657
   position 1.0820826687779381 0.46696319194696917 1.3717856290430213
 }
 TexturedBackground {
@@ -30,6 +30,8 @@ Robot {
       device [
         RotationalMotor {
           name "servo_motor"
+          maxVelocity 0.026
+          maxTorque 0.21557
         }
       ]
       endPoint Solid {
@@ -50,4 +52,5 @@ Robot {
       }
     }
   ]
+  controller "robot2_Zamudio_Shadeen"
 }
